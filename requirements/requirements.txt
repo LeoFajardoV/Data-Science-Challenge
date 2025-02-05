@@ -1,0 +1,41 @@
+!pip install nltk
+
+import requests
+import pandas as pd
+import numpy as np
+import os
+import io
+from PIL import Image
+from tqdm import tqdm
+
+# Sklearn
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+from sklearn.metrics import pairwise_distances
+
+# Pytorch / Torchvision para modelos pre-entrenados
+import torch
+import torchvision.models as models
+import torchvision.transforms as transforms
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Tensor
+import tensorflow as tf
+from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
+from tensorflow.keras.preprocessing import image
+
+#stopwords
+import nltk
+nltk.download('stopwords')  # Descarga las stopwords
+
+from nltk.corpus import stopwords
+spanish_stopwords = stopwords.words('spanish')
+
+import re
+from collections import Counter
